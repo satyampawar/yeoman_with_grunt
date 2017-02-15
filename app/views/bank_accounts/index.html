@@ -1,0 +1,30 @@
+<br/>
+<div class="row">
+    <div class="col-md-12">
+    <!-- <p ng-bind="obj_err"></p> -->
+        <a class="btn btn-primary create_account" href="#/bank_accounts/new">Create a account</a>
+        <!-- <a class="btn btn-primary" href="#/bank_accounts/new">Create a account</a> -->
+        <h3 class="block">Bank Accounts</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>User Name</th>
+                <th>Account Number</th>
+                <th>Avail Balance</th>
+                <th>Actions</th>
+            </tr>
+            <p ng-bind="errors"></p>
+            <tr  ng-repeat="ba in bank_accounts">
+                <td ng-bind="ba.user_name"></td>
+                <td ng-bind="ba.account_number"></td>
+                <td ng-bind="ba.avail_balance"></td>
+                <td>
+                  <a href="#/bank_accounts/{{ba.id}}/debit">Debit</a> |
+                  <a href="#/bank_accounts/{{ba.id}}/deposite">Deposite</a> |
+                  <a href="#/bank_accounts/{{ba.id}}/withdraw">Withdraw</a> |
+                  <a href="#/bank_accounts/{{ba.id}}/transaction_views">Transaction views</a> 
+                 
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

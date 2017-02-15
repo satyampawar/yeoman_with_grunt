@@ -1,0 +1,18 @@
+<br/>
+<div class="row">
+    <div class="col-md-12">
+
+        <!-- <a class="btn btn-primary" href="#/bank_accounts/new">Create a account</a> -->
+        <h3 class="block">Transactions</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>Details</th>
+            </tr>
+            <tr ng-repeat="ff in transactions">
+                <td>
+                  <span>You've</span>&nbsp; <span ng-bind="ff.transaction_type"></span>&nbsp; {{ff.transaction_type == "debit" ? "on" : "from"}} &nbsp; <span ng-bind="ff.account_number"></span> &nbsp;Rs <span ng-bind="ff.amount"></span>  &nbsp; at <span ng-bind="ff.updated_at"></span>&nbsp;
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

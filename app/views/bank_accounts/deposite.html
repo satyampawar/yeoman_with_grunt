@@ -1,0 +1,17 @@
+<h5>Cash Withdraw</h5>
+<div class="panel-body panel-body-nopadding" >
+ <form name="depositeForm" ng-submit="deposite()" ng-controller="BankAccountDepositeCtr" ng-class="{'has-error' : submitted && bankForm.user_name.$invalid}">
+<div class="row">
+  <div class="col-xs-6 col-md-6">
+      <label class="col-sm-3 control-label">Amount</label>
+  </div>
+  <div class="col-xs-6 col-md-6">
+      <input class="form-control" name="amount" placeholder="Amount" type="text"  ng-model="bank_account.amount" />
+       
+  </div>
+  <input  type="submit" id="submit" class="btn btn-primary" value="Submit" />
+
+</form>
+</div>
+            
+         

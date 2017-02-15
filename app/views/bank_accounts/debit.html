@@ -1,0 +1,30 @@
+<div class="panel-body panel-body-nopadding">
+ <form ng-submit="debit()" ng-controller="BankAccountDebitCtr" ng-class="{'has-error' : submitted && bankForm.user_name.$invalid}">
+  <p ng-bind="obj_err" class="bg-danger" style="color: white;"></p>
+ <p ng-bind="obj_success" class="bg-success" style="color: white;"></p>
+   <p style="color:#AD721F" ng-hide="show">Note: Account number length should be in between 11 and 16 And also not a string </p>
+ <div class="row">
+  <div class="col-xs-6 col-md-6">
+      <label class="col-sm-3 control-label">Account Number</label>
+  </div>
+  <div class="col-xs-6 col-md-6">
+      <input class="form-control" name="account_number" placeholder="Account Number" type="text" required ng-model="bank_account.account_number"/>
+  </div>
+   <p ng-show=" submitted && bankForm.account_number.$invalid" class="help-block">Last name is required.</p>
+</div><div class="row">
+  <div class="col-xs-6 col-md-6">
+      <label class="col-sm-3 control-label">Amount</label>
+  </div>
+  <div class="col-xs-6 col-md-6">
+    <input class="form-control" name="amount" placeholder="amount" type="text" required ng-model="bank_account.amount"/>
+  </div>
+  <div class="col-xs-6 col-md-6 push-6" style="margin-top: 5px;">
+      <input  type="submit" id="submit" class="btn btn-success" value="Submit"  />
+      <a href="#/bank_account" class="btn btn-primary">Back</a>
+    </div>
+</form>
+
+
+</div>
+            
+         

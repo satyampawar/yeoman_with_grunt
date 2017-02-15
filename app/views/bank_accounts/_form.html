@@ -1,0 +1,35 @@
+
+<form name="bankForm" ng-submit="save()" ng-controller="BankAddCtr" ng-class="{'has-error' : submitted && bankForm.user_name.$invalid}">
+ <p ng-bind="obj_err" class="bg-danger" style="color: white;"></p>
+  <div class="row">
+   <p style="color:#A56710" ng-hide="show">Account number length should be in between 11 and 16 And also not a string </p>
+  <div class="col-xs-6 col-md-6">
+      <label class="col-sm-6 control-label">User name</label>
+  </div>
+  <div class="col-xs-6 col-md-6">
+      <input class="form-control" name="user_name" placeholder="User Name" type="text"  ng-model="bank_account.user_name" ng-required ="user_name"/>
+  </div>
+  <h1 ng-if="bankForm.bank_account.user_name.$invalid"></h1>
+   <p ng-show=" submitted && bankForm.user_name.$invalid" class="help-block">User Name is invalid</p>
+</div><div class="row">
+  <div class="col-xs-6 col-md-6">
+      <label class="col-sm-6 control-label">Account Number</label>
+  </div>
+  <div class="col-xs-6 col-md-6">
+      <input class="form-control" name="account_number" placeholder="Account Number" type="text"  ng-model="bank_account.account_number" required account-directive/>
+       <p ng-show=" submitted && bankForm.account_number.$invalid" class="help-block">Account number is invaild</p>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-xs-6 col-md-6">
+      <label class="col-sm-6 control-label">Available balance</label>
+  </div>
+  <div class="col-xs-6 col-md-6">
+      <input class="form-control" name="avail_balance" placeholder="Balance" type="text"  ng-model="bank_account.avail_balance" ng-required ="user_name"/>
+       <p ng-show=" submitted && bankForm.avail_balance.$invalid" class="help-block">Balance is invalid</p>
+  </div>
+  </div>
+  <input  type="submit" id="submit" class="btn btn-primary" value="Submit" ng-disabled='!show' />
+  
+</form>
+

@@ -1,0 +1,23 @@
+<h5>Cash Withdraw</h5>
+<div class="panel-body panel-body-nopadding">
+
+ <form name="withdrawForm" ng-submit="withdraw()" ng-controller="BankAccountWithdrawCtr" ng-class="{'has-error' : submitted && bankForm.user_name.$invalid}">
+ <p ng-bind="obj_err" class="bg-danger" style="color: white;"></p>
+ <p ng-bind="obj_success" class="bg-success" style="color: white;"></p>
+<div class="col-md-6"><div class="row">
+  <div class="col-xs-6 col-md-6">
+      <label class="col-sm-6 control-label">Amount</label>
+  </div>
+  <div class="col-xs-6 col-md-6">
+      <input class="form-control" name="amount" placeholder="Amount" type="text"  ng-model="bank_account.amount" ng-required = "amount"/>
+       <p ng-show=" submitted && withdrawForm.amount.$invalid" class="help-block">amount is invalid</p>
+  </div>
+  <div class="col-xs-6 col-md-6">
+	   <input  type="submit" id="submit" class="btn btn-success" value="Submit"  />
+     <a href="#/bank_account" class="btn btn-primary">Back</a>
+  </div>
+</form>
+
+</div>
+</div>
+            
