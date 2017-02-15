@@ -24,6 +24,7 @@ module.exports = function (grunt) {
   };
 
   grunt.loadNpmTasks('grunt-build-control');
+  var pkg = require('./package.json');
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -79,7 +80,7 @@ module.exports = function (grunt) {
         },
         heroku: {
           options: {
-            remote: 'git@heroku.com:example-heroku-webapp-1988.git',
+            remote: 'git@heroku.com/obscure-spire-48711.git',
             branch: 'master',
             tag: pkg.version
           }
